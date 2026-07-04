@@ -4,6 +4,7 @@ This repository contains the implementation code used for lung nodule segmentati
 
 
 **Overview**
+
 CLAHE-RATS-Net is a click-guided two-stage segmentation framework:
 1. Preprocessing: CT slices are converted to HU-normalized images, nodule annotations are parsed from LIDC-style XML files, and binary masks are created using pixel-wise annotation fusion.
 2. CLAHE enhancement: Contrast-limited adaptive histogram equalization is applied to improve local nodule visibility.
