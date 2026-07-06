@@ -1,10 +1,5 @@
 # ============================================================
 # train_baseline_clahe_all_models.py
-# Purpose:
-#   Train and evaluate baseline vs CLAHE datasets
-#   Models: U-Net, Attention U-Net, U-Net++, Proposed Residual Attention Shallow U-Net
-#   Input: image + click map = 2 channels
-#   Output: separate results for each model and preprocessing type
 # ============================================================
 
 import os
@@ -26,7 +21,7 @@ from torch.utils.data import Dataset, DataLoader
 # CONFIGURATION
 # ============================================================
 
-PROJECT_ROOT = Path(r"E:\Mahender PHD\segmentaion\Project 23-4-2026")
+PROJECT_ROOT = Path(r"ACTUAL_PATH")
 
 SPLIT_DIR = PROJECT_ROOT / "outputs" / "baseline_clahe_preprocessing" / "dataset_splits"
 
