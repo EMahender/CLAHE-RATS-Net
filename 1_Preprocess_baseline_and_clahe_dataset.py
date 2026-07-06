@@ -15,8 +15,8 @@ from skimage.morphology import remove_small_objects, binary_closing, disk
 # =========================================================
 # USER SETTINGS
 # =========================================================
-RAW_ROOT = r"E:\Mahender PHD\segmentaion\Project 23-4-2026\LIDC\LIDC-IDRI"
-OUT_ROOT = r"E:\Mahender PHD\segmentaion\Project 23-4-2026\outputs\baseline_clahe_preprocessing"
+RAW_ROOT = r"ACTUAL_PATH"
+OUT_ROOT = r"ACTUAL_PATH"
 
 MAX_PATIENTS = 150          # None for all
 TARGET_SIZE = (512, 256)   # (width, height)
