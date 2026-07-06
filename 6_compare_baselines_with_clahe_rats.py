@@ -1,38 +1,5 @@
 # =============================================================================
 # STEP 6: Compare Baseline Models with Proposed CLAHE-RATS-Net
-#
-# Objective:
-#   Fair SCI-Q1-level comparison for lung nodule segmentation.
-#
-# Compared models:
-#   1. U-Net
-#   2. Attention U-Net
-#   3. UNet++
-#   4. ResUNet
-#   5. TransUNet-lite
-#   6. Proposed CLAHE-RATS-Net
-#
-# Dataset:
-#   outputs/proposed_roi_clahe_dataset/
-#       train_roi_clahe.csv
-#       val_roi_clahe.csv
-#       test_roi_clahe.csv
-#
-# Input to all models:
-#   Channel 1: CLAHE-enhanced ROI image
-#   Channel 2: click / center heatmap
-#
-# Proposed CLAHE-RATS-Net:
-#   Stage 1: Attention U-Net coarse segmentation
-#   Stage 2: Residual refinement U-Net
-#   Final: final_logits = coarse_logits + residual_logits
-#
-# Outputs:
-#   outputs/baseline_proposed_comparison/
-#       model-wise training logs
-#       validation threshold summaries
-#       test threshold summaries
-#       final_comparison_summary.xlsx
 # =============================================================================
 
 import os
@@ -58,7 +25,7 @@ warnings.filterwarnings("ignore")
 # 1. CONFIGURATION
 # =============================================================================
 
-PROJECT_ROOT = Path(r"E:\Mahender PHD\segmentaion\Project 23-4-2026")
+PROJECT_ROOT = Path(r"ACTUAL_PATH")
 
 ROI_DATASET_DIR = PROJECT_ROOT / "outputs" / "proposed_roi_clahe_dataset"
 
