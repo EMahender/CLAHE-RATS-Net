@@ -1,26 +1,6 @@
 # =============================================================================
 # STEP 16: Count Original CT Images, Ground Truth Masks, Positive and Negative Images
 # =============================================================================
-#
-# Purpose:
-#   For selected 150 LIDC-IDRI patients, this script counts:
-#     1. Original CT DICOM images/slices
-#     2. Ground-truth mask images
-#     3. Patients containing both original CT and GT masks
-#     4. Positive images/masks
-#     5. Negative / empty images/masks
-#     6. Patient-wise and overall summary
-#
-# Original CT path:
-#   E:\Mahender PHD\segmentaion\Project 23-4-2026\LIDC\LIDC-IDRI
-#
-# GT mask path:
-#   E:\Mahender PHD\segmentaion\Project 23-4-2026\outputs\baseline_clahe_preprocessing
-#
-# Output:
-#   E:\Mahender PHD\segmentaion\Project 23-4-2026\outputs\dataset_distribution_summary
-#
-# =============================================================================
 
 from pathlib import Path
 from collections import Counter, defaultdict
@@ -35,7 +15,7 @@ import pydicom
 # 1. PATH CONFIGURATION
 # =============================================================================
 
-PROJECT_ROOT = Path(r"E:\Mahender PHD\segmentaion\Project 23-4-2026")
+PROJECT_ROOT = Path(r"ACTUAL_PATH")
 
 ORIGINAL_DICOM_ROOT = PROJECT_ROOT / "LIDC" / "LIDC-IDRI"
 
@@ -45,10 +25,8 @@ OUTPUT_DIR = PROJECT_ROOT / "outputs" / "dataset_distribution_summary"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 PATIENTWISE_CSV = OUTPUT_DIR / "patientwise_original_gt_positive_negative_150.csv"
-PATIENTWISE_XLSX = OUTPUT_DIR / "patientwise_original_gt_positive_negative_150.xlsx"
 
 SUMMARY_CSV = OUTPUT_DIR / "overall_original_gt_positive_negative_150_summary.csv"
-SUMMARY_XLSX = OUTPUT_DIR / "overall_original_gt_positive_negative_150_summary.xlsx"
 
 
 # =============================================================================
