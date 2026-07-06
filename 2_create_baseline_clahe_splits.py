@@ -10,7 +10,7 @@ import pandas as pd
 # CONFIGURATION
 # ============================================================
 PROJECT_ROOT = r"ACTUAL_PATH"
-PREPROCESS_DIR = os.path.join(PROJECT_ROOT, "outputs", "baseline_clahe_preprocessing")
+PREPROCESS_DIR = os.path.join(PROJECT_ROOT, "outputs", "ACTUAL_PATH")
 OUTPUT_SPLIT_DIR = os.path.join(PREPROCESS_DIR, "dataset_splits")
 
 TRAIN_RATIO = 0.70
