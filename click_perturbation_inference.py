@@ -1,17 +1,3 @@
-"""
-Inference-only click perturbation robustness experiment for CLAHE-RATS-Net.
-
-This script does not retrain or modify the existing model. It loads a trained
-PyTorch checkpoint, replaces the original click map with randomly perturbed
-Gaussian click maps, evaluates the test set, performs paired statistical tests,
-and saves publication-ready result tables and figures.
-
-Example:
-    python tools/click_perturbation_inference.py ^
-        --checkpoint "outputs/baseline_proposed_comparison_V0/CLAHE_RATS_Net/checkpoints/best_CLAHE_RATS_Net.pth" ^
-        --test-csv "outputs/proposed_roi_clahe_dataset_clean/test_roi_clahe.csv" ^
-        --output-dir "outputs/click_perturbation_experiment"
-"""
 
 from __future__ import annotations
 
