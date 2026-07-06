@@ -9,7 +9,7 @@ import pandas as pd
 # ============================================================
 # CONFIGURATION
 # ============================================================
-PROJECT_ROOT = r"E:\Mahender PHD\segmentaion\Project 23-4-2026"
+PROJECT_ROOT = r"ACTUAL_PATH"
 PREPROCESS_DIR = os.path.join(PROJECT_ROOT, "outputs", "baseline_clahe_preprocessing")
 OUTPUT_SPLIT_DIR = os.path.join(PREPROCESS_DIR, "dataset_splits")
 
