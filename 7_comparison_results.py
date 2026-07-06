@@ -18,10 +18,9 @@ import pandas as pd
 # 1. PATH CONFIGURATION
 # =============================================================================
 
-PROJECT_ROOT = Path(r"E:\Mahender PHD\segmentaion\Project 23-4-2026")
+PROJECT_ROOT = Path(r"ACTUAL_PATH")
 
 BASE_DIR = PROJECT_ROOT / "outputs" / "baseline_proposed_comparison"
-OUTPUT_EXCEL = BASE_DIR / "final_model_comparison_master.xlsx"
 OUTPUT_CSV = BASE_DIR / "final_model_comparison_master.csv"
 
 MODEL_NAMES = [
