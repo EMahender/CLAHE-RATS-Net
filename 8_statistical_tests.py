@@ -1,24 +1,5 @@
 # =============================================================================
 # STEP 8: Statistical Significance Testing
-#
-# Tests:
-#   1. Paired t-test
-#   2. Wilcoxon signed-rank test
-#
-# Compares:
-#   Proposed CLAHE_RATS_Net
-#   vs.
-#   U-Net, Attention U-Net, UNet++, ResUNet, TransUNet-Lite
-#
-# Input:
-#   outputs/baseline_proposed_comparison/<model>/logs/test_samplewise_metrics.csv
-#   outputs/baseline_proposed_comparison/final_model_comparison_master.csv
-#
-# Output:
-#   outputs/baseline_proposed_comparison/statistical_tests/
-#       statistical_test_results.xlsx
-#       statistical_test_results.csv
-#       aligned_samplewise_metrics.csv
 # =============================================================================
 
 import os
@@ -33,7 +14,7 @@ from scipy import stats
 # 1. PATH CONFIGURATION
 # =============================================================================
 
-PROJECT_ROOT = Path(r"E:\Mahender PHD\segmentaion\Project 23-4-2026")
+PROJECT_ROOT = Path(r"ACTUAL_PATH")
 
 BASE_DIR = PROJECT_ROOT / "outputs" / "baseline_proposed_comparison"
 
@@ -41,7 +22,6 @@ OUTPUT_DIR = BASE_DIR / "statistical_tests"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 MASTER_CSV = BASE_DIR / "final_model_comparison_master.csv"
-MASTER_XLSX = BASE_DIR / "final_model_comparison_master.xlsx"
 
 PROPOSED_MODEL = "CLAHE_RATS_Net"
 
