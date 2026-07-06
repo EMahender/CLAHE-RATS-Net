@@ -1,31 +1,7 @@
 # =============================================================================
 # STEP 1: Build Clean CLAHE ROI Dataset for Proposed Model
 # =============================================================================
-# Purpose:
-#   This script reads patient-wise split CSV files generated from baseline/CLAHE
-#   preprocessing and creates a clean ROI dataset for lung nodule segmentation.
-#
-# Input:
-#   outputs/baseline_clahe_preprocessing/dataset_splits/clahe_train.csv
-#   outputs/baseline_clahe_preprocessing/dataset_splits/clahe_val.csv
-#   outputs/baseline_clahe_preprocessing/dataset_splits/clahe_test.csv
-#
-# Output:
-#   outputs/proposed_roi_clahe_dataset_clean/
-#       train_roi_clahe.csv
-#       val_roi_clahe.csv
-#       test_roi_clahe.csv
-#       roi_quality_summary.xlsx
-#       visual_checks/
-#
-# Improvements:
-#   1. Clean centroid-based ROI crop
-#   2. Tumor-border touch rejection
-#   3. Small-mask filtering
-#   4. Click-map validation
-#   5. ROI quality reports
-#   6. Optional ROI jitter augmentation for training split
-# =============================================================================
+
 
 import os
 import cv2
@@ -45,15 +21,15 @@ warnings.filterwarnings("ignore")
 # 1. CONFIGURATION
 # =============================================================================
 
-PROJECT_ROOT = Path(r"E:\Mahender PHD\segmentaion\Project 23-4-2026")
+PROJECT_ROOT = Path(r"ACTUAL_PATH")
 
-SPLIT_DIR = PROJECT_ROOT / "outputs" / "baseline_clahe_preprocessing" / "dataset_splits"
+SPLIT_DIR = PROJECT_ROOT / "ACTUAL_PATH"
 
-OUTPUT_DIR = PROJECT_ROOT / "outputs" / "proposed_roi_clahe_dataset_clean"
-ROI_IMAGE_DIR = OUTPUT_DIR / "images"
-ROI_MASK_DIR = OUTPUT_DIR / "masks"
-ROI_CLICK_DIR = OUTPUT_DIR / "clicks"
-VISUAL_CHECK_DIR = OUTPUT_DIR / "visual_checks"
+OUTPUT_DIR = PROJECT_ROOT / "ACTUAL_PATH"
+ROI_IMAGE_DIR = OUTPUT_DIR / "ACTUAL_PATH"
+ROI_MASK_DIR = OUTPUT_DIR / "ACTUAL_PATH"
+ROI_CLICK_DIR = OUTPUT_DIR / "ACTUAL_PATH"
+VISUAL_CHECK_DIR = OUTPUT_DIR / "ACTUAL_PATH"
 
 for folder in [OUTPUT_DIR, ROI_IMAGE_DIR, ROI_MASK_DIR, ROI_CLICK_DIR, VISUAL_CHECK_DIR]:
     folder.mkdir(parents=True, exist_ok=True)
